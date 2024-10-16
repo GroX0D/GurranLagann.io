@@ -1,30 +1,38 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
+    padding: 10px;
 }
 
 body {
-    background-color: rgb(1, 5, 44);
-    font-family: sans-serif;
-    font-size: 16px;
+    background-color: #fcf6f5;
+    font-family: serif;
+    padding: 10px;
     line-height: 1.5;
 }
 
 .header {
-    background-color: brown;
+    position: relative;
+    bottom: 30px;
+    background-color: #63d1f6;
     border-radius: 20px;
     padding: 1em;
     text-align: center;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: serif;
+}
+
+.header h1 { 
+    font-family: serif;
+    font-size: 70px;
 }
 
 .nav {
-    background-color: wheat;
+    position: relative;
+    bottom: 50px;
     border-radius: 20px;
-    padding: 1em;
+    background-color: #2b2821;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,44 +43,46 @@ body {
     flex-wrap: wrap;
     justify-content: space-evenly;
     list-style: none;
+    gap: 50px;
 }
 
 .nav-link li {
-    margin: 0.5em;
-    padding: 0.5em;
     font-size: large;
 }
 
 .nav-link a {
     text-decoration: none;
     color: black;
+    background-color: #e88b00;
+    padding: 20px;
+    border-radius: 20px;
 }
 
 .nav-link a:hover {
-    padding: 0.5em;
     border-radius: 20px;
     color: white;
-    background-color: brown;
+    background-color: #63d1f6;
+    transition-duration: 1s;
+
 }
 
 #container {
+    background-color: #2b2821;
     display: flex;
     flex-direction: column;
+    position: relative;
+    bottom: 50px;
 }
 
 .aside {
-    background-color: wheat;
+    background-color: #63d1f6;
     border-radius: 20px;
     padding: 1em;
-    width: 100%;
-    height: auto;
     margin-bottom: 1em;
-    overflow-y: scroll;
-    scrollbar-color: transparent transparent;
 }
 
 .aside h1 {
-    background-color: brown;
+    background-color: #e88b00;
     border-radius: 20px;
     text-align: center;
     justify-content: center;
@@ -81,8 +91,13 @@ body {
     align-items: center;
 }
 
+#container .aside p {
+    font-family: serif;
+
+}
+
 .main {
-    background-color: wheat;
+    background-color: #a6e7f1;
     border-radius: 20px;
     padding: 1em;
     width: 100%;
@@ -92,8 +107,9 @@ body {
 
 .main .maint {
     padding: 0.5em;
+    margin: 10px;
     text-align: center;
-    background-color: brown;
+    background-color: #e88b00;
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -101,7 +117,7 @@ body {
 }
 
 .article {
-    background-color: brown;
+    background-color: #63d1f6;
     border-radius: 20px;
     padding: 1em;
     margin-bottom: 1em;
@@ -115,9 +131,12 @@ body {
     justify-content: center;
     width: 100%;
     height: auto;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-    scrollbar-color: transparent transparent;
+    background-image: url(/img/Gurren\ lagann.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 10px;
+    border-radius: 20px;
 }
 
 .article .gamabar img {
@@ -127,16 +146,24 @@ body {
     margin: 0.5em;
 }
 
+.article .gamabar img:hover {
+    cursor: pointer;
+}
+
 .article .text {
     display: flex;
     flex-direction: column;
     padding: 0.5em;
-    background-color: wheat;
+    background-color: #a6e7f1;
     border-radius: 20px;
 }
 
+.article .text .textt {
+    font-family: monospace;
+}
+
 .section {
-    background-color: brown;
+    background-color: #e88b00;
     border-radius: 20px;
     padding: 1em;
     width: 100%;
@@ -160,21 +187,25 @@ body {
     text-align: center;
 }
 
-.footer h1 {
-    padding: 0.5em;
+.footer {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    position: relative;
+    bottom: 100px;
+}
+
+.footer h1, .footer p {
+    padding: 0.5em;
+    text-align: center;
 }
 
 .footer p {
-    padding: 0.5em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    font-size: 0.8em;
+    color: #ccc;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 600px) {
     #container {
         flex-direction: row;
     }
